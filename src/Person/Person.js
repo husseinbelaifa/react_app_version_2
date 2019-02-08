@@ -1,13 +1,21 @@
  import React from 'react';
- import './Person.css'
+ import'./Person.css';
 //  import Radium from 'radium';
- const person=(props)=>{
+
+ const Person=(props)=>{
   // //  const style={
   // //     '@media(min-width:500px':{
   // //       width:'450px'
   // //     }
   //  }
+
+  const rnd=Math.random();
+  if(rnd>0.7) {
+    throw new Error('something went wrong');
+  }
+  
      return (
+     
     <div className="Person" >
        <p onClick={props.click}> 
          i'm {props.name} and  i 'm 
@@ -19,4 +27,4 @@
     </div>
      )
  };
- export default person;
+ export default Person;
